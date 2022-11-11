@@ -1,0 +1,1 @@
+python3 db2_exporter/db2_exporter.py -p 8000 -c metrics.yml

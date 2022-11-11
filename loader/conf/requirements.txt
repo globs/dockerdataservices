@@ -1,0 +1,7 @@
+minio
+psycopg2-binary
+pandas
+ibm_db
+flask
+flask_cors
+gunicorn

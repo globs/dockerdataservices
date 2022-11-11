@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose --file docker-compose.yml convert -c
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: presto-worker
+  name: presto-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: presto-worker
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose --file docker-compose.yml convert -c
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: presto-worker
+    spec:
+      containers:
+        - image: presto-worker
+          name: presto-worker
+          resources: {}
+          volumeMounts:
+            - mountPath: /opt/presto/etc/config.properties
+              name: presto-worker-claim0
+            - mountPath: /opt/presto/etc/catalog
+              name: presto-worker-claim1
+      restartPolicy: Always
+      volumes:
+        - name: presto-worker-claim0
+          persistentVolumeClaim:
+            claimName: presto-worker-claim0
+        - name: presto-worker-claim1
+          persistentVolumeClaim:
+            claimName: presto-worker-claim1
+status: {}

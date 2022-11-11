@@ -1,0 +1,147 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose --file docker-compose.yml convert -c
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: restapi-datalab
+  name: restapi-datalab
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: restapi-datalab
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose --file docker-compose.yml convert -c
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/datalab-network: "true"
+        io.kompose.service: restapi-datalab
+    spec:
+      containers:
+        - args:
+            - gunicorn
+            - --workers
+            - "3"
+            - --bind
+            - 0.0.0.0:3333
+            - --timeout
+            - "600"
+            - --log-level=debug
+            - wsgi:app
+            - --reload
+          env:
+            - name: DB2_DB2
+              valueFrom:
+                configMapKeyRef:
+                  key: DB2_DB2
+                  name: loader-conf-loader-env
+            - name: DB2_HOST
+              valueFrom:
+                configMapKeyRef:
+                  key: DB2_HOST
+                  name: loader-conf-loader-env
+            - name: DB2_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  key: DB2_PASSWORD
+                  name: loader-conf-loader-env
+            - name: DB2_PORT
+              valueFrom:
+                configMapKeyRef:
+                  key: DB2_PORT
+                  name: loader-conf-loader-env
+            - name: DB2_SCHEMA
+              valueFrom:
+                configMapKeyRef:
+                  key: DB2_SCHEMA
+                  name: loader-conf-loader-env
+            - name: DB2_USER
+              valueFrom:
+                configMapKeyRef:
+                  key: DB2_USER
+                  name: loader-conf-loader-env
+            - name: MINIO_CREDS_JSON
+              valueFrom:
+                configMapKeyRef:
+                  key: MINIO_CREDS_JSON
+                  name: loader-conf-loader-env
+            - name: MONGO_DB
+              valueFrom:
+                configMapKeyRef:
+                  key: MONGO_DB
+                  name: loader-conf-loader-env
+            - name: MONGO_HOST
+              valueFrom:
+                configMapKeyRef:
+                  key: MONGO_HOST
+                  name: loader-conf-loader-env
+            - name: MONGO_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  key: MONGO_PASSWORD
+                  name: loader-conf-loader-env
+            - name: MONGO_PORT
+              valueFrom:
+                configMapKeyRef:
+                  key: MONGO_PORT
+                  name: loader-conf-loader-env
+            - name: MONGO_SCHEMA
+              valueFrom:
+                configMapKeyRef:
+                  key: MONGO_SCHEMA
+                  name: loader-conf-loader-env
+            - name: MONGO_USER
+              valueFrom:
+                configMapKeyRef:
+                  key: MONGO_USER
+                  name: loader-conf-loader-env
+            - name: POSTGRESQL_DB
+              valueFrom:
+                configMapKeyRef:
+                  key: POSTGRESQL_DB
+                  name: loader-conf-loader-env
+            - name: POSTGRESQL_HOST
+              valueFrom:
+                configMapKeyRef:
+                  key: POSTGRESQL_HOST
+                  name: loader-conf-loader-env
+            - name: POSTGRESQL_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  key: POSTGRESQL_PASSWORD
+                  name: loader-conf-loader-env
+            - name: POSTGRESQL_PORT
+              valueFrom:
+                configMapKeyRef:
+                  key: POSTGRESQL_PORT
+                  name: loader-conf-loader-env
+            - name: POSTGRESQL_SCHEMA
+              valueFrom:
+                configMapKeyRef:
+                  key: POSTGRESQL_SCHEMA
+                  name: loader-conf-loader-env
+            - name: POSTGRESQL_USER
+              valueFrom:
+                configMapKeyRef:
+                  key: POSTGRESQL_USER
+                  name: loader-conf-loader-env
+            - name: logs_location
+              valueFrom:
+                configMapKeyRef:
+                  key: logs_location
+                  name: loader-conf-loader-env
+          image: restapi-datalab
+          name: restapi-datalab
+          ports:
+            - containerPort: 3333
+          resources: {}
+      hostname: restapi-datalab
+      restartPolicy: Always
+status: {}

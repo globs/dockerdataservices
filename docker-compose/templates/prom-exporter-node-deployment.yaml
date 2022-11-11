@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose --file docker-compose.yml convert -c
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: prom-exporter-node
+  name: prom-exporter-node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: prom-exporter-node
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose --file docker-compose.yml convert -c
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/datalab-network: "true"
+        io.kompose.service: prom-exporter-node
+    spec:
+      containers:
+        - args:
+            - --path.procfs=/host/proc
+            - --path.rootfs=/rootfs
+            - --path.sysfs=/host/sys
+            - --collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($|/)
+          image: docker.io/prom/node-exporter:latest
+          name: promexporter-node-datalab
+          ports:
+            - containerPort: 9100
+          resources: {}
+          volumeMounts:
+            - mountPath: /host/proc
+              name: prom-exporter-node-claim0
+              readOnly: true
+            - mountPath: /host/sys
+              name: prom-exporter-node-claim1
+              readOnly: true
+            - mountPath: /rootfs
+              name: prom-exporter-node-claim2
+              readOnly: true
+      hostname: promexporter_node-datalab
+      restartPolicy: Always
+      volumes:
+        - name: prom-exporter-node-claim0
+          persistentVolumeClaim:
+            claimName: prom-exporter-node-claim0
+            readOnly: true
+        - name: prom-exporter-node-claim1
+          persistentVolumeClaim:
+            claimName: prom-exporter-node-claim1
+            readOnly: true
+        - name: prom-exporter-node-claim2
+          persistentVolumeClaim:
+            claimName: prom-exporter-node-claim2
+            readOnly: true
+status: {}

@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose --file docker-compose.yml convert -c
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: prom-exporter-pg
+  name: prom-exporter-pg
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: prom-exporter-pg
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose --file docker-compose.yml convert -c
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/datalab-network: "true"
+        io.kompose.service: prom-exporter-pg
+    spec:
+      containers:
+        - env:
+            - name: DATA_SOURCE_NAME
+              value: postgresql://vincent:passtochange@pg-datalab:5432/postgres?sslmode=disable
+          image: quay.io/prometheuscommunity/postgres-exporter
+          name: promexporter-pg-datalab
+          ports:
+            - containerPort: 9187
+          resources: {}
+      hostname: promexporter_pg-datalab
+      restartPolicy: Always
+status: {}

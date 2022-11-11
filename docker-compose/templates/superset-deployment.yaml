@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose --file docker-compose.yml convert -c
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: superset
+  name: superset
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: superset
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose --file docker-compose.yml convert -c
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: superset
+    spec:
+      containers:
+        - env:
+            - name: ADMIN_PWD
+              value: admin
+            - name: ADMIN_USERNAME
+              value: admin
+          image: arezamoosavi/superset:latest
+          name: superset
+          ports:
+            - containerPort: 8088
+          resources: {}
+          volumeMounts:
+            - mountPath: /superset
+              name: superset-claim0
+      restartPolicy: Always
+      volumes:
+        - name: superset-claim0
+          persistentVolumeClaim:
+            claimName: superset-claim0
+status: {}

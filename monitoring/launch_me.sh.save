@@ -1,0 +1,33 @@
+#podman network create prometheus
+
+promotheus_data='/data/promotheus'
+sudo mkdir $promotheus_data 
+sudo chmod 777 $promotheus_data
+
+echo "Recreating internal network"
+podman network rm prometheus --force
+podman network create prometheus
+
+echo "Deploying exporter node db2 and postgresql exporters"
+nohup ./db2_exporter/install_export.sh&
+
+cd ./exporter_postgresql 
+./launch_me.sh 
+cd -
+cd ./exporter_node/ 
+./launch_me.sh
+cd -
+
+echo "Deploying Promotheus and Grafana services"
+echo "Removing existing pods"
+
+
+
+
+podman rm promserver --force
+podman run -d --network=prometheus -p 9091:9090 --name promserver -v /home/ubuntu/admin/vps_monitor/appvolume:/etc/prometheus docker.io/prom/prometheus
+
+podman rm grafana --force
+podman run -d --network=prometheus --name grafana -p 3000:3000 docker.io/grafana/grafana
+
+

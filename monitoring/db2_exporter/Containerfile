@@ -1,0 +1,38 @@
+FROM ubuntu:20.04
+
+LABEL author="Vincent GAUTIER" \
+      name="Open Metrics format DB2 exporter for Prometheus" \
+      version="v1.0-BETA"
+
+#ADD user
+RUN useradd -ms /bin/bash db2exporter
+
+#Install image dependencies
+RUN apt-get -y -qq update \
+    && apt-get -y -qq install make gcc g++ libxml2 \
+    && apt-get install -y python3.8 python3-pip python3.8-dev\
+    build-essential unixodbc-dev libpq-dev curl\
+     nano
+
+# Install python project requirements file to container
+COPY ["./conf/requirements.txt", \
+      "/opt/"]
+
+RUN python3.8 -m pip install --upgrade pip \
+    && python3.8 -m pip install -r /opt/requirements.txt \
+    && rm /opt/requirements.txt 
+
+RUN mkdir /home/db2exporter/project/
+COPY db2_exporter/ /home/db2exporter/project/db2_exporter/
+COPY .env /home/db2exporter/project/
+COPY entrypoint.sh /home/db2exporter/project/entrypoint.sh
+COPY example_config/metrics.yml /home/db2exporter/project/
+RUN mkdir /home/db2exporter/project/logs
+RUN chown db2exporter:db2exporter /home/db2exporter/project/logs
+WORKDIR /home/db2exporter/project/
+
+ENV PYTHONPATH="/home/db2exporter/project/:${PYTHONPATH}"
+RUN mkdir /tmp/result_files &&  chown -R db2exporter /tmp/result_files
+RUN mkdir /home/db2exporter/logs &&  chown -R db2exporter /home/db2exporter/logs
+#USER db2exporter
+ENTRYPOINT "./entrypoint.sh"

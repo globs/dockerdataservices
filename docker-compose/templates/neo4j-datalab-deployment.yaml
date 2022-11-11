@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose --file docker-compose.yml convert -c
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: neo4j-datalab
+  name: neo4j-datalab
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: neo4j-datalab
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose --file docker-compose.yml convert -c
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/datalab-network: "true"
+        io.kompose.service: neo4j-datalab
+    spec:
+      containers:
+        - env:
+            - name: NEO4J_AUTH
+              value: neo4j/hellographs
+          image: docker.io/neo4j:latest
+          name: neo4j-datalab
+          ports:
+            - containerPort: 7474
+            - containerPort: 7687
+          resources: {}
+          volumeMounts:
+            - mountPath: /data
+              name: neo4j-datalab-claim0
+            - mountPath: /logs
+              name: neo4j-datalab-claim1
+            - mountPath: /var/lib/neo4j/import
+              name: neo4j-datalab-claim2
+            - mountPath: /plugins
+              name: neo4j-datalab-claim3
+      hostname: neo4j-datalab
+      restartPolicy: Always
+      volumes:
+        - name: neo4j-datalab-claim0
+          persistentVolumeClaim:
+            claimName: neo4j-datalab-claim0
+        - name: neo4j-datalab-claim1
+          persistentVolumeClaim:
+            claimName: neo4j-datalab-claim1
+        - name: neo4j-datalab-claim2
+          persistentVolumeClaim:
+            claimName: neo4j-datalab-claim2
+        - name: neo4j-datalab-claim3
+          persistentVolumeClaim:
+            claimName: neo4j-datalab-claim3
+status: {}

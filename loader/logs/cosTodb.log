@@ -1,0 +1,630 @@
+2022-10-27 23:50:49,356 - root - {dbpooledconnector.py:20}: INFO - PostgreSQL connection pool initialized
+2022-10-27 23:50:49,357 - root - {dbpooledconnector.py:22}: INFO - {'dbtype': 'pg', 'creds': {'pg_user': 'vincent', 'pg_password': 'gG9rV(@+LE5WyZmA', 'pg_host': 'localhost', 'pg_port': '5432', 'pg_app_db': 'postgres'}}
+2022-10-27 23:50:49,430 - root - {dbutils.py:226}: INFO - columns ['c_custkey', 'c_name', 'c_address', 'c_nationkey', 'c_phone', 'c_acctbal', 'c_mktsegment', 'c_comment', 'c_filler']
+2022-10-27 23:50:49,501 - root - {dbutils.py:226}: INFO - columns ['c_custkey', 'c_name', 'c_address', 'c_nationkey', 'c_phone', 'c_acctbal', 'c_mktsegment', 'c_comment', 'c_filler']
+2022-10-27 23:52:11,374 - root - {dbpooledconnector.py:20}: INFO - PostgreSQL connection pool initialized
+2022-10-27 23:52:11,374 - root - {dbpooledconnector.py:22}: INFO - {'dbtype': 'pg', 'creds': {'pg_user': 'vincent', 'pg_password': 'gG9rV(@+LE5WyZmA', 'pg_host': 'localhost', 'pg_port': '5432', 'pg_app_db': 'postgres'}}
+2022-10-27 23:52:11,443 - root - {dbutils.py:226}: INFO - columns ['c_custkey', 'c_name', 'c_address', 'c_nationkey', 'c_phone', 'c_acctbal', 'c_mktsegment', 'c_comment', 'c_filler']
+2022-10-27 23:52:11,518 - root - {dbutils.py:226}: INFO - columns ['c_custkey', 'c_name', 'c_address', 'c_nationkey', 'c_phone', 'c_acctbal', 'c_mktsegment', 'c_comment', 'c_filler']
+2022-10-27 23:54:50,686 - root - {dbpooledconnector.py:20}: INFO - PostgreSQL connection pool initialized
+2022-10-27 23:54:50,687 - root - {dbpooledconnector.py:22}: INFO - {'dbtype': 'pg', 'creds': {'pg_user': 'vincent', 'pg_password': 'gG9rV(@+LE5WyZmA', 'pg_host': 'localhost', 'pg_port': '5432', 'pg_app_db': 'postgres'}}
+2022-10-27 23:54:50,766 - root - {dbutils.py:226}: INFO - columns ['c_custkey', 'c_name', 'c_address', 'c_nationkey', 'c_phone', 'c_acctbal', 'c_mktsegment', 'c_comment', 'c_filler']
+2022-10-27 23:54:51,010 - root - {dbutils.py:226}: INFO - columns ['l_orderkey', 'l_partkey', 'l_suppkey', 'l_linenumber', 'l_quantity', 'l_extendedprice', 'l_discount', 'l_tax', 'l_returnflag', 'l_linestatus', 'l_shipdate', 'l_commitdate', 'l_receiptdate', 'l_shipinstruct', 'l_shipmode', 'l_comment', 'c_filler']
+2022-10-27 23:56:33,559 - root - {dbpooledconnector.py:20}: INFO - PostgreSQL connection pool initialized
+2022-10-27 23:56:33,560 - root - {dbpooledconnector.py:22}: INFO - {'dbtype': 'pg', 'creds': {'pg_user': 'vincent', 'pg_password': 'gG9rV(@+LE5WyZmA', 'pg_host': 'localhost', 'pg_port': '5432', 'pg_app_db': 'postgres'}}
+2022-10-27 23:56:33,632 - root - {dbutils.py:226}: INFO - columns ['c_custkey', 'c_name', 'c_address', 'c_nationkey', 'c_phone', 'c_acctbal', 'c_mktsegment', 'c_comment', 'c_filler']
+2022-10-27 23:56:34,710 - root - {dbutils.py:226}: INFO - columns ['l_orderkey', 'l_partkey', 'l_suppkey', 'l_linenumber', 'l_quantity', 'l_extendedprice', 'l_discount', 'l_tax', 'l_returnflag', 'l_linestatus', 'l_shipdate', 'l_commitdate', 'l_receiptdate', 'l_shipinstruct', 'l_shipmode', 'l_comment', 'c_filler']
+2022-10-28 11:03:00,804 - root - {dbpooledconnector.py:20}: INFO - PostgreSQL connection pool initialized
+2022-10-28 11:03:00,805 - root - {dbpooledconnector.py:22}: INFO - {'dbtype': 'pg', 'creds': {'pg_user': 'vincent', 'pg_password': 'gG9rV(@+LE5WyZmA', 'pg_host': 'localhost', 'pg_port': '5432', 'pg_app_db': 'postgres'}}
+2022-10-28 11:03:00,896 - root - {dbutils.py:226}: INFO - columns ['l_orderkey', 'l_partkey', 'l_suppkey', 'l_linenumber', 'l_quantity', 'l_extendedprice', 'l_discount', 'l_tax', 'l_returnflag', 'l_linestatus', 'l_shipdate', 'l_commitdate', 'l_receiptdate', 'l_shipinstruct', 'l_shipmode', 'l_comment', 'c_filler']
+2022-10-28 14:19:03,761 - root - {dbpooledconnector.py:20}: INFO - PostgreSQL connection pool initialized
+2022-10-28 14:19:03,762 - root - {dbpooledconnector.py:22}: INFO - {'dbtype': 'pg', 'creds': {'pg_user': 'vincent', 'pg_password': 'gG9rV(@+LE5WyZmA', 'pg_host': 'localhost', 'pg_port': '5432', 'pg_app_db': 'postgres'}}
+2022-10-28 14:19:04,797 - root - {dbutils.py:226}: INFO - columns ['l_orderkey', 'l_partkey', 'l_suppkey', 'l_linenumber', 'l_quantity', 'l_extendedprice', 'l_discount', 'l_tax', 'l_returnflag', 'l_linestatus', 'l_shipdate', 'l_commitdate', 'l_receiptdate', 'l_shipinstruct', 'l_shipmode', 'l_comment', 'c_filler']
+2022-10-28 14:32:24,005 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-28 14:32:24,006 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'vincent', 'db2_password': 'gG9rV(@+LE5WyZmA', 'db2_host': 'localhost', 'db2_port': '5432', 'db2_app_db': 'postgres'}}
+2022-10-28 14:32:24,006 - root - {dbconnector.py:14}: ERROR - Error while connecting to db2 database
+2022-10-28 14:32:24,019 - root - {dbpooledconnector.py:20}: INFO - PostgreSQL connection pool initialized
+2022-10-28 14:32:24,020 - root - {dbpooledconnector.py:22}: INFO - {'dbtype': 'pg', 'creds': {'pg_user': 'vincent', 'pg_password': 'gG9rV(@+LE5WyZmA', 'pg_host': 'localhost', 'pg_port': '5432', 'pg_app_db': 'postgres'}}
+2022-10-28 14:32:24,073 - root - {dbutils.py:119}: ERROR - Traceback (most recent call last):
+  File "/home/vincent/git/demodbs/loader/src/common/db/postgres/dbutils.py", line 110, in executeQuery
+    cursor.execute(sql)
+psycopg2.errors.UndefinedTable: relation "assurence_cie.garanties" does not exist
+LINE 1: delete from ASSURENCE_CIE.GARANTIES a 
+                    ^
+
+
+2022-10-28 14:32:24,074 - root - {dbutils.py:226}: INFO - columns []
+2022-10-28 14:32:24,076 - root - {dbutils.py:240}: ERROR - Bulk insert in pg database error: syntax error at or near ")"
+LINE 1: COPY "GARANTIES") FROM stdin WITH DELIMITER AS '|' NULL AS '...
+                        ^
+
+2022-10-28 14:32:56,480 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-28 14:32:56,481 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'vincent', 'db2_password': 'gG9rV(@+LE5WyZmA', 'db2_host': 'localhost', 'db2_port': '5432', 'db2_app_db': 'postgres'}}
+2022-10-28 14:32:56,482 - root - {dbconnector.py:14}: ERROR - Error while connecting to db2 database
+2022-10-28 14:32:56,494 - root - {cos_manager.py:85}: ERROR - Traceback (most recent call last):
+  File "cos_manager.py", line 82, in main
+    minio_cos.transferCSVFileToDB2Table('main', 'csv/GARANTIES_202210281412.csv', 'ASSURENCE_CIE','GARANTIES','|')
+  File "cos_manager.py", line 74, in transferCSVFileToDB2Table
+    self.db2dbops.insertCSVtoTable(str(self.getObjectData(bucketname, objectname)),schema, table, csv_colsep)
+TypeError: insertCSVtoTable() takes 4 positional arguments but 5 were given
+
+2022-10-28 14:33:44,362 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-28 14:33:44,362 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'vincent', 'db2_password': 'gG9rV(@+LE5WyZmA', 'db2_host': 'localhost', 'db2_port': '5432', 'db2_app_db': 'postgres'}}
+2022-10-28 14:33:44,362 - root - {dbconnector.py:14}: ERROR - Error while connecting to db2 database
+2022-10-28 14:33:44,374 - root - {dbconnector.py:22}: INFO - executing statement: 
+        INSERT INTO ASSURENCE_CIE.GARANTIES
+        SELECT * FROM EXTERNAL '/home/vincent/temp/temp_csv.csv'
+        LIKEASSURENCE_CIE.GARANTIES
+        USING (
+        CCSID 1208  
+        STRING_DELIMITER DOUBLE
+                DELIMITER '$,' 
+                FORMAT TEXT 
+                LOGDIR './'
+                REMOTESOURCE 'odbc'
+                )
+        ;
+        
+2022-10-28 14:33:44,375 - root - {dbconnector.py:27}: ERROR - Error while executing query on db2 database
+2022-10-28 14:35:24,649 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-28 14:35:24,649 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'vincent', 'db2_password': 'gG9rV(@+LE5WyZmA', 'db2_host': 'localhost', 'db2_port': '5432', 'db2_app_db': 'postgres'}}
+2022-10-28 14:35:24,650 - root - {dbconnector.py:14}: ERROR - Error while connecting to db2 database
+2022-10-28 14:35:24,661 - root - {dbconnector.py:22}: INFO - executing statement: 
+        INSERT INTO ASSURENCE_CIE.GARANTIES
+        SELECT * FROM EXTERNAL '/home/vincent/temp/temp_csv.csv'
+        LIKE ASSURENCE_CIE.GARANTIES
+        USING (
+        CCSID 1208  
+        STRING_DELIMITER DOUBLE
+                DELIMITER '$,' 
+                FORMAT TEXT 
+                LOGDIR './'
+                REMOTESOURCE 'odbc'
+                )
+        ;
+        
+2022-10-28 14:35:24,662 - root - {dbconnector.py:27}: ERROR - Error while executing query on db2 database
+2022-10-28 14:36:18,293 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-28 14:36:18,294 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'vincent', 'db2_password': 'gG9rV(@+LE5WyZmA', 'db2_host': 'localhost', 'db2_port': '5432', 'db2_app_db': 'postgres'}}
+2022-10-28 14:36:18,295 - root - {dbconnector.py:14}: ERROR - Error while connecting to db2 database
+2022-10-28 14:36:18,307 - root - {dbconnector.py:22}: INFO - executing statement: 
+        INSERT INTO ASSURENCE_CIE.GARANTIES
+        SELECT * FROM EXTERNAL '/home/vincent/temp/temp_csv.csv'
+        LIKE ASSURENCE_CIE.GARANTIES
+        USING (
+        CCSID 1208  
+        STRING_DELIMITER DOUBLE
+                DELIMITER '$,' 
+                FORMAT TEXT 
+                LOGDIR '/home/vincent/temp/'
+                REMOTESOURCE 'odbc'
+                )
+        ;
+        
+2022-10-28 14:36:18,309 - root - {dbconnector.py:27}: ERROR - Error while executing query on db2 database
+2022-10-28 14:36:53,320 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-28 14:36:53,321 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'vincent', 'db2_password': 'gG9rV(@+LE5WyZmA', 'db2_host': 'localhost', 'db2_port': '5432', 'db2_app_db': 'postgres'}}
+2022-10-28 14:36:53,321 - root - {dbconnector.py:14}: ERROR - Error while connecting to db2 database
+2022-10-28 14:36:53,335 - root - {dbconnector.py:22}: INFO - executing statement: 
+        INSERT INTO ASSURENCE_CIE.GARANTIES
+        SELECT * FROM EXTERNAL '/home/vincent/temp/temp_csv.csv'
+        LIKE ASSURENCE_CIE.GARANTIES
+        USING (
+        CCSID 1208  
+        STRING_DELIMITER DOUBLE
+                DELIMITER ',' 
+                FORMAT TEXT 
+                LOGDIR '/home/vincent/temp/'
+                REMOTESOURCE 'odbc'
+                )
+        ;
+        
+2022-10-28 14:36:53,336 - root - {dbconnector.py:27}: ERROR - Error while executing query on db2 database
+2022-10-28 14:37:32,748 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-28 14:37:32,748 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'vincent', 'db2_password': 'gG9rV(@+LE5WyZmA', 'db2_host': 'localhost', 'db2_port': '5432', 'db2_app_db': 'postgres'}}
+2022-10-28 14:37:32,748 - root - {dbconnector.py:14}: ERROR - Error while connecting to db2 database
+2022-10-28 14:37:32,760 - root - {dbconnector.py:22}: INFO - executing statement: 
+        -- INSERT INTO ASSURENCE_CIE.GARANTIES
+        SELECT * FROM EXTERNAL '/home/vincent/temp/temp_csv.csv'
+        LIKE ASSURENCE_CIE.GARANTIES
+        USING (
+        CCSID 1208  
+        STRING_DELIMITER DOUBLE
+                DELIMITER ',' 
+                FORMAT TEXT 
+                LOGDIR '/home/vincent/temp/'
+                REMOTESOURCE 'odbc'
+                )
+        ;
+        
+2022-10-28 14:37:32,760 - root - {dbconnector.py:27}: ERROR - Error while executing query on db2 database
+2022-10-28 14:38:53,188 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-28 14:38:53,189 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'vincent', 'db2_password': 'gG9rV(@+LE5WyZmA', 'db2_host': 'localhost', 'db2_port': '5432', 'db2_app_db': 'postgres'}}
+2022-10-28 14:38:53,189 - root - {dbconnector.py:14}: ERROR - Error while connecting to db2 database
+2022-10-28 14:38:53,201 - root - {dbconnector.py:22}: INFO - executing statement: 
+        -- INSERT INTO ASSURENCE_CIE.GARANTIES
+        SELECT * FROM EXTERNAL '/home/vincent/temp/temp_csv.csv'
+        LIKE ASSURENCE_CIE.GARANTIES
+        USING (
+        CCSID 1208  
+        STRING_DELIMITER DOUBLE
+                DELIMITER ',' 
+                FORMAT TEXT 
+                LOGDIR '/home/vincent/temp/'
+                REMOTESOURCE 'JDBC'
+                )
+        ;
+        
+2022-10-28 14:38:53,201 - root - {dbconnector.py:27}: ERROR - Error while executing query on db2 database
+2022-10-28 14:40:11,461 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-28 14:40:11,462 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'vincent', 'db2_password': 'gG9rV(@+LE5WyZmA', 'db2_host': 'localhost', 'db2_port': '5432', 'db2_app_db': 'postgres'}}
+2022-10-28 14:40:11,462 - root - {dbconnector.py:14}: ERROR - Error while connecting to db2 database
+2022-10-28 14:40:11,474 - root - {dbconnector.py:22}: INFO - executing statement: 
+        -- INSERT INTO ASSURENCE_CIE.GARANTIES
+        SELECT * FROM EXTERNAL '/home/vincent/temp/temp_csv.csv'
+        LIKE ASSURENCE_CIE.GARANTIES
+        USING (
+        CCSID 1208  
+        STRING_DELIMITER DOUBLE
+                DELIMITER ',' 
+                FORMAT TEXT 
+                LOGDIR '/home/vincent/temp/'
+                REMOTESOURCE ''
+                )
+        ;
+        
+2022-10-28 14:40:11,475 - root - {dbconnector.py:27}: ERROR - Error while executing query on db2 database
+2022-10-28 14:41:20,291 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-28 14:41:20,291 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'vincent', 'db2_password': 'gG9rV(@+LE5WyZmA', 'db2_host': 'localhost', 'db2_port': '5432', 'db2_app_db': 'postgres'}}
+2022-10-28 14:41:20,291 - root - {dbconnector.py:14}: ERROR - Error while connecting to db2 database
+2022-10-28 14:41:20,304 - root - {dbconnector.py:22}: INFO - executing statement: 
+        -- INSERT INTO ASSURANCE_CIE.GARANTIES
+        SELECT * FROM EXTERNAL '/home/vincent/temp/temp_csv.csv'
+        LIKE ASSURANCE_CIE.GARANTIES
+        USING (
+        CCSID 1208  
+        STRING_DELIMITER DOUBLE
+                DELIMITER ',' 
+                FORMAT TEXT 
+                LOGDIR '/home/vincent/temp/'
+                REMOTESOURCE 'jdbc'
+                )
+        ;
+        
+2022-10-28 14:41:20,308 - root - {dbconnector.py:27}: ERROR - Error while executing query on db2 database
+2022-10-28 14:42:17,925 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-28 14:42:17,926 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'vincent', 'db2_password': 'gG9rV(@+LE5WyZmA', 'db2_host': 'localhost', 'db2_port': '5432', 'db2_app_db': 'postgres'}}
+2022-10-28 14:42:17,926 - root - {dbconnector.py:14}: ERROR - Error while connecting to db2 database
+2022-10-28 14:42:17,926 - root - {dbconnector.py:15}: INFO - Connected to DB2
+2022-10-28 14:42:17,938 - root - {dbconnector.py:23}: INFO - executing statement: 
+        INSERT INTO ASSURANCE_CIE.GARANTIES
+        SELECT * FROM EXTERNAL '/home/vincent/temp/temp_csv.csv'
+        LIKE ASSURANCE_CIE.GARANTIES
+        USING (
+        CCSID 1208  
+        STRING_DELIMITER DOUBLE
+                DELIMITER ',' 
+                FORMAT TEXT 
+                LOGDIR '/home/vincent/temp/'
+                REMOTESOURCE 'jdbc'
+                )
+        ;
+        
+2022-10-28 14:42:17,940 - root - {dbconnector.py:28}: ERROR - Error while executing query on db2 database
+2022-10-28 14:44:20,668 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-28 14:44:20,669 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'vincent', 'db2_password': 'gG9rV(@+LE5WyZmA', 'db2_host': 'localhost', 'db2_port': '5432', 'db2_app_db': 'postgres'}}
+2022-10-28 14:44:20,670 - root - {dbconnector.py:14}: ERROR - Error while connecting to db2 database
+2022-10-28 14:44:20,681 - root - {dbconnector.py:23}: INFO - executing statement: 
+        INSERT INTO ASSURANCE_CIE.GARANTIES
+        SELECT * FROM EXTERNAL '/home/vincent/temp/temp_csv.csv'
+        LIKE ASSURANCE_CIE.GARANTIES
+        USING (
+        CCSID 1208  
+        STRING_DELIMITER DOUBLE
+                DELIMITER ',' 
+                FORMAT TEXT 
+                LOGDIR '/home/vincent/temp/'
+                REMOTESOURCE 'jdbc'
+                )
+        ;
+        
+2022-10-28 14:44:20,682 - root - {dbconnector.py:28}: ERROR - Error while executing query on db2 database
+2022-10-28 14:45:06,772 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-28 14:45:06,773 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'vincent', 'db2_password': 'gG9rV(@+LE5WyZmA', 'db2_host': 'localhost', 'db2_port': '5432', 'db2_app_db': 'postgres'}}
+2022-10-28 14:45:06,774 - root - {dbconnector.py:14}: ERROR - Error while connecting to db2 database
+2022-10-28 14:45:06,774 - root - {cos_manager.py:85}: ERROR - Traceback (most recent call last):
+  File "/home/vincent/git/demodbs/loader/src/common/db/db2/dbconnector.py", line 12, in __init__
+    self.conn = ibm_db.connect("DATABASE=TESTDB;HOSTNAME=localhost;PORT=50000;PROTOCOL=TCPIP;UID=db2inst1;PWD=ChangeMe;", "", "" )
+NameError: name 'ibm_db' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "cos_manager.py", line 79, in main
+    minio_cos = S3COSMinioManager()
+  File "cos_manager.py", line 28, in __init__
+    self.db2dbops = DB2Connector()
+  File "/home/vincent/git/demodbs/loader/src/common/db/db2/dbconnector.py", line 15, in __init__
+    logging.error(e.message)
+AttributeError: 'NameError' object has no attribute 'message'
+
+2022-10-28 14:45:19,044 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-28 14:45:19,045 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'vincent', 'db2_password': 'gG9rV(@+LE5WyZmA', 'db2_host': 'localhost', 'db2_port': '5432', 'db2_app_db': 'postgres'}}
+2022-10-28 14:45:19,046 - root - {dbconnector.py:14}: ERROR - Error while connecting to db2 database
+2022-10-28 14:45:19,046 - root - {dbconnector.py:15}: ERROR - name 'ibm_db' is not defined
+2022-10-28 14:45:19,059 - root - {dbconnector.py:24}: INFO - executing statement: 
+        INSERT INTO ASSURANCE_CIE.GARANTIES
+        SELECT * FROM EXTERNAL '/home/vincent/temp/temp_csv.csv'
+        LIKE ASSURANCE_CIE.GARANTIES
+        USING (
+        CCSID 1208  
+        STRING_DELIMITER DOUBLE
+                DELIMITER ',' 
+                FORMAT TEXT 
+                LOGDIR '/home/vincent/temp/'
+                REMOTESOURCE 'jdbc'
+                )
+        ;
+        
+2022-10-28 14:45:19,059 - root - {dbconnector.py:29}: ERROR - Error while executing query on db2 database
+2022-10-28 14:45:52,725 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-28 14:45:52,726 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'vincent', 'db2_password': 'gG9rV(@+LE5WyZmA', 'db2_host': 'localhost', 'db2_port': '5432', 'db2_app_db': 'postgres'}}
+2022-10-28 14:45:53,044 - root - {dbconnector.py:24}: INFO - executing statement: 
+        INSERT INTO ASSURANCE_CIE.GARANTIES
+        SELECT * FROM EXTERNAL '/home/vincent/temp/temp_csv.csv'
+        LIKE ASSURANCE_CIE.GARANTIES
+        USING (
+        CCSID 1208  
+        STRING_DELIMITER DOUBLE
+                DELIMITER ',' 
+                FORMAT TEXT 
+                LOGDIR '/home/vincent/temp/'
+                REMOTESOURCE 'jdbc'
+                )
+        ;
+        
+2022-10-28 14:48:04,679 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-28 14:48:04,679 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'vincent', 'db2_password': 'gG9rV(@+LE5WyZmA', 'db2_host': 'localhost', 'db2_port': '5432', 'db2_app_db': 'postgres'}}
+2022-10-28 14:48:04,732 - root - {dbconnector.py:24}: INFO - executing statement: 
+        INSERT INTO ASSURANCE_CIE.GARANTIES
+        SELECT * FROM EXTERNAL '/home/vincent/temp/temp_csv.csv'
+        LIKE ASSURANCE_CIE.GARANTIES
+        USING (
+        CCSID 1208  
+        STRING_DELIMITER DOUBLE
+                DELIMITER ',' 
+                FORMAT TEXT 
+                LOGDIR '/home/vincent/temp/'
+                REMOTESOURCE 'jdbc'
+                )
+        ;
+        
+2022-10-28 14:48:40,820 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-28 14:48:40,821 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'vincent', 'db2_password': 'gG9rV(@+LE5WyZmA', 'db2_host': 'localhost', 'db2_port': '5432', 'db2_app_db': 'postgres'}}
+2022-10-28 14:48:40,877 - root - {dbconnector.py:24}: INFO - executing statement: 
+        INSERT INTO ASSURANCE_CIE.GARANTIES
+        SELECT * FROM EXTERNAL '/home/vincent/temp/temp_csv.csv'
+        LIKE ASSURANCE_CIE.GARANTIES
+        USING (
+        CCSID 1208  
+        STRING_DELIMITER DOUBLE
+                DELIMITER ',' 
+                FORMAT TEXT 
+                LOGDIR '/home/vincent/temp/'
+                REMOTESOURCE 'jdbc'
+                )
+        ;
+        
+2022-10-30 22:17:58,391 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 22:17:58,391 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'vincent', 'db2_password': 'gG9rV(@+LE5WyZmA', 'db2_host': 'localhost', 'db2_port': '5432', 'db2_app_db': 'postgres'}}
+2022-10-30 22:17:58,440 - root - {dbconnector.py:14}: ERROR - Error while connecting to db2 database
+2022-10-30 22:17:58,440 - root - {dbconnector.py:15}: ERROR - [IBM][CLI Driver] SQL30081N  A communication error has been detected. Communication protocol being used: "TCP/IP".  Communication API being used: "SOCKETS".  Location where the error was detected: "127.0.0.1".  Communication function detecting the error: "connect".  Protocol specific error code(s): "111", "*", "*".  SQLSTATE=08001 SQLCODE=-30081
+2022-10-30 22:17:58,446 - root - {cos_manager.py:90}: ERROR - Traceback (most recent call last):
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/cos_manager.py", line 82, in main
+    minio_cos = S3COSMinioManager()
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/cos_manager.py", line 30, in __init__
+    self.connect()
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/cos_manager.py", line 41, in connect
+    buckets = self.client.list_buckets()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/minio/api.py", line 639, in list_buckets
+    response = self._execute("GET")
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/minio/api.py", line 403, in _execute
+    return self._url_open(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/minio/api.py", line 386, in _url_open
+    raise response_error
+minio.error.S3Error: S3 operation failed; code: InvalidAccessKeyId, message: The Access Key Id you provided does not exist in our records., resource: /, request_id: 1722F8B759732049, host_id: 7b352998-9500-46d4-afcc-1637cbe121e9
+
+2022-10-30 22:22:29,990 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 22:22:29,990 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 22:22:30,570 - root - {cos_manager.py:90}: ERROR - Traceback (most recent call last):
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/cos_manager.py", line 82, in main
+    minio_cos = S3COSMinioManager()
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/cos_manager.py", line 30, in __init__
+    self.connect()
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/cos_manager.py", line 37, in connect
+    self.client = Minio(self.credentials['url'],
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/minio/api.py", line 130, in __init__
+    self._base_url = BaseURL(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/minio/helpers.py", line 399, in __init__
+    raise ValueError("path in endpoint is not allowed")
+ValueError: path in endpoint is not allowed
+
+2022-10-30 22:23:54,827 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 22:23:54,827 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 22:23:55,329 - root - {cos_manager.py:90}: ERROR - Traceback (most recent call last):
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/cos_manager.py", line 84, in main
+    config_manager.apply_json(common.settings.db_transfers)
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/load_data.py", line 21, in apply_json
+    config_dict = json.loads(employee_string)
+NameError: name 'employee_string' is not defined
+
+2022-10-30 22:24:11,234 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 22:24:11,235 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 22:24:11,734 - root - {cos_manager.py:90}: ERROR - Traceback (most recent call last):
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/cos_manager.py", line 84, in main
+    config_manager.apply_json(common.settings.db_transfers)
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/load_data.py", line 21, in apply_json
+    config_dict = json.loads(json_string)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 6 column 9 (char 71)
+
+2022-10-30 22:26:21,799 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 22:26:21,800 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 22:26:22,316 - root - {cos_manager.py:90}: ERROR - Traceback (most recent call last):
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/cos_manager.py", line 84, in main
+    config_manager.apply_json(common.settings.db_transfers)
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/load_data.py", line 21, in apply_json
+    config_dict = json.loads(json_string)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 3 column 7 (char 9)
+
+2022-10-30 22:26:39,623 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 22:26:39,623 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 22:26:40,120 - root - {cos_manager.py:90}: ERROR - Traceback (most recent call last):
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/cos_manager.py", line 84, in main
+    config_manager.apply_json(common.settings.db_transfers)
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/load_data.py", line 21, in apply_json
+    config_dict = json.loads(json_string)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 6 column 9 (char 70)
+
+2022-10-30 22:26:49,899 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 22:26:49,899 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 22:26:50,411 - root - {cos_manager.py:90}: ERROR - Traceback (most recent call last):
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/cos_manager.py", line 84, in main
+    config_manager.apply_json(common.settings.db_transfers)
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/load_data.py", line 21, in apply_json
+    config_dict = json.loads(json_string)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 7 column 5 (char 67)
+
+2022-10-30 22:27:24,999 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 22:27:24,999 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 22:27:25,500 - root - {load_data.py:23}: INFO - {'dbtype': 'pg', 'source': 'minio'}
+2022-10-30 22:27:57,459 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 22:27:57,459 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 22:27:57,969 - root - {load_data.py:23}: INFO - {'dbtype': 'pg', 'source': 'minio'}
+2022-10-30 22:28:34,389 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 22:28:34,390 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 22:28:34,901 - root - {cos_manager.py:90}: ERROR - Traceback (most recent call last):
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/cos_manager.py", line 84, in main
+    config_manager.apply_json(common.settings.db_transfers)
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/load_data.py", line 21, in apply_json
+    config_dict = json.loads(json_string)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 6 column 7 (char 68)
+
+2022-10-30 22:28:59,286 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 22:28:59,287 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 22:28:59,800 - root - {load_data.py:23}: INFO - {'dbtype': 'pg', 'source': 'minio', 'config': {'bucket_name': 'main', 'object_name': 'csv/lineitem.tbl.1', 'schema': 'public', 'table': 'lineitem', 'csv_colsep': '|', 'table_ddl': 'CREATE TABLE LINEITEM ( L_ORDERKEY    INTEGER NOT NULL,\n  L_PARTKEY     INTEGER NOT NULL,\n  L_SUPPKEY     INTEGER NOT NULL,\n  L_LINENUMBER  INTEGER NOT NULL,\n  L_QUANTITY    DECIMAL(15,2) NOT NULL,\n  L_EXTENDEDPRICE  DECIMAL(15,2) NOT NULL,\n  L_DISCOUNT    DECIMAL(15,2) NOT NULL,\n  L_TAX         DECIMAL(15,2) NOT NULL,\n  L_RETURNFLAG  CHAR(1) NOT NULL,\n  L_LINESTATUS  CHAR(1) NOT NULL,\n  L_SHIPDATE    DATE NOT NULL,\n  L_COMMITDATE  DATE NOT NULL,\n  L_RECEIPTDATE DATE NOT NULL,\n  L_SHIPINSTRUCT CHAR(25) NOT NULL,\n  L_SHIPMODE     CHAR(10) NOT NULL,\n  L_COMMENT      VARCHAR(44) NOT null, C_FILLER CHAR(1) NULL);\n'}}
+2022-10-30 22:58:21,620 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 22:58:21,620 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 22:58:22,169 - root - {cos_manager.py:90}: ERROR - Traceback (most recent call last):
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/cos_manager.py", line 84, in main
+    config_manager.apply_json(common.settings.db_transfers)
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/load_data.py", line 25, in apply_json
+    bucket_name {jobconfig['bucket_name']}
+KeyError: 'bucket_name'
+
+2022-10-30 22:59:26,186 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 22:59:26,186 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 22:59:26,695 - root - {load_data.py:23}: INFO - 
+            job target db type pg
+            bucket_name main
+            object_name csv/lineitem.tbl.1
+            schema public
+            table lineitem
+            csv_colsep |
+            
+2022-10-30 23:11:11,836 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 23:11:11,836 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 23:11:12,353 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 23:11:12,353 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 23:11:12,362 - root - {load_data.py:38}: INFO - 
+            job target db type pg
+            bucket_name main
+            object_name lineitem.tbl.1
+            schema public
+            table lineitem
+            csv_colsep |
+            
+2022-10-30 23:11:12,363 - root - {main.py:16}: ERROR - Traceback (most recent call last):
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/main.py", line 10, in main
+    config_manager.apply_json(common.settings.db_transfers)
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/load_data.py", line 46, in apply_json
+    transferCSVFileToPostGRESQLTable(jobconfig['config']['bucket_name'],
+NameError: name 'transferCSVFileToPostGRESQLTable' is not defined
+
+2022-10-30 23:14:06,135 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 23:14:06,135 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 23:14:06,627 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 23:14:06,628 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 23:14:06,640 - root - {load_data.py:38}: INFO - 
+            job target db type pg
+            bucket_name main
+            object_name lineitem.tbl.1
+            schema public
+            table lineitem
+            csv_colsep |
+            
+2022-10-30 23:14:06,640 - root - {dbpooledconnector.py:20}: INFO - PostgreSQL connection pool initialized
+2022-10-30 23:14:06,641 - root - {dbpooledconnector.py:22}: INFO - {'dbtype': 'pg', 'creds': {'pg_user': 'vincent', 'pg_password': 'gG9rV(@+LE5WyZmA', 'pg_host': 'localhost', 'pg_port': '5432', 'pg_app_db': 'postgres'}}
+2022-10-30 23:14:06,643 - root - {main.py:16}: ERROR - Traceback (most recent call last):
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/main.py", line 10, in main
+    config_manager.apply_json(common.settings.db_transfers)
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/load_data.py", line 46, in apply_json
+    self.dbops.executeQuery(f"DROP TABLE IF EXISTS {jobconfig['config']['schema']}.{jobconfig['config']['table']}")
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/common/db/postgres/dbutils.py", line 105, in executeQuery
+    cnn = DBPooledConnector().pg_pool.getconn()
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/common/db/postgres/dbpooledconnector.py", line 11, in wrapper
+    instance[0] = cls(*args, **kwargs)
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/common/db/postgres/dbpooledconnector.py", line 23, in __init__
+    self.pg_pool = psycopg2.pool.ThreadedConnectionPool(5, 50,
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/psycopg2/pool.py", line 161, in __init__
+    AbstractConnectionPool.__init__(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/psycopg2/pool.py", line 59, in __init__
+    self._connect()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/psycopg2/pool.py", line 63, in _connect
+    conn = psycopg2.connect(*self._args, **self._kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+2022-10-30 23:14:57,024 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 23:14:57,025 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 23:14:57,581 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 23:14:57,581 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 23:14:57,593 - root - {load_data.py:38}: INFO - 
+            job target db type pg
+            bucket_name main
+            object_name lineitem.tbl.1
+            schema public
+            table lineitem
+            csv_colsep |
+            
+2022-10-30 23:14:57,594 - root - {dbpooledconnector.py:20}: INFO - PostgreSQL connection pool initialized
+2022-10-30 23:14:57,594 - root - {dbpooledconnector.py:22}: INFO - {'dbtype': 'pg', 'creds': {'pg_user': 'vincent', 'pg_password': 'gG9rV(@+LE5WyZmA', 'pg_host': 'localhost', 'pg_port': '5432', 'pg_app_db': 'postgres'}}
+2022-10-30 23:14:57,916 - root - {dbutils.py:226}: INFO - columns ['l_orderkey', 'l_partkey', 'l_suppkey', 'l_linenumber', 'l_quantity', 'l_extendedprice', 'l_discount', 'l_tax', 'l_returnflag', 'l_linestatus', 'l_shipdate', 'l_commitdate', 'l_receiptdate', 'l_shipinstruct', 'l_shipmode', 'l_comment', 'c_filler']
+2022-10-30 23:50:30,655 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 23:50:30,655 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 23:50:31,167 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 23:50:31,167 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 23:50:31,177 - root - {load_data.py:38}: INFO - 
+            job target db type pg
+            bucket_name main
+            object_name lineitem.tbl.1
+            schema public
+            table lineitem
+            csv_colsep |
+            
+2022-10-30 23:50:31,177 - root - {main.py:16}: ERROR - Traceback (most recent call last):
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/main.py", line 10, in main
+    config_manager.apply_json(common.settings.db_transfers)
+  File "/home/ubuntu/my_projects/git/demodbs/loader/src/load_data.py", line 46, in apply_json
+    if jobconfig['config']['mode'] == 'create':
+KeyError: 'mode'
+
+2022-10-30 23:51:06,417 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 23:51:06,417 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 23:51:06,909 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-30 23:51:06,909 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-30 23:51:06,919 - root - {load_data.py:38}: INFO - 
+            job target db type pg
+            bucket_name main
+            object_name lineitem.tbl.1
+            schema public
+            table lineitem
+            csv_colsep |
+            
+2022-10-30 23:51:06,919 - root - {dbpooledconnector.py:20}: INFO - PostgreSQL connection pool initialized
+2022-10-30 23:51:06,919 - root - {dbpooledconnector.py:22}: INFO - {'dbtype': 'pg', 'creds': {'pg_user': 'vincent', 'pg_password': 'gG9rV(@+LE5WyZmA', 'pg_host': 'localhost', 'pg_port': '5432', 'pg_app_db': 'postgres'}}
+2022-10-30 23:51:07,209 - root - {dbutils.py:226}: INFO - columns ['l_orderkey', 'l_partkey', 'l_suppkey', 'l_linenumber', 'l_quantity', 'l_extendedprice', 'l_discount', 'l_tax', 'l_returnflag', 'l_linestatus', 'l_shipdate', 'l_commitdate', 'l_receiptdate', 'l_shipinstruct', 'l_shipmode', 'l_comment', 'c_filler']
+2022-10-30 23:51:09,843 - root - {load_data.py:38}: INFO - 
+            job target db type pg
+            bucket_name main
+            object_name lineitem.tbl.2,lineitem.tbl.3,lineitem.tbl.4,lineitem.tbl.5,lineitem.tbl.6,lineitem.tbl.7,lineitem.tbl.8,lineitem.tbl.9,lineitem.tbl.10
+            schema public
+            table lineitem
+            csv_colsep |
+            
+2022-10-30 23:51:10,551 - root - {dbutils.py:226}: INFO - columns ['l_orderkey', 'l_partkey', 'l_suppkey', 'l_linenumber', 'l_quantity', 'l_extendedprice', 'l_discount', 'l_tax', 'l_returnflag', 'l_linestatus', 'l_shipdate', 'l_commitdate', 'l_receiptdate', 'l_shipinstruct', 'l_shipmode', 'l_comment', 'c_filler']
+2022-10-30 23:51:14,082 - root - {dbutils.py:226}: INFO - columns ['l_orderkey', 'l_partkey', 'l_suppkey', 'l_linenumber', 'l_quantity', 'l_extendedprice', 'l_discount', 'l_tax', 'l_returnflag', 'l_linestatus', 'l_shipdate', 'l_commitdate', 'l_receiptdate', 'l_shipinstruct', 'l_shipmode', 'l_comment', 'c_filler']
+2022-10-30 23:51:17,826 - root - {dbutils.py:226}: INFO - columns ['l_orderkey', 'l_partkey', 'l_suppkey', 'l_linenumber', 'l_quantity', 'l_extendedprice', 'l_discount', 'l_tax', 'l_returnflag', 'l_linestatus', 'l_shipdate', 'l_commitdate', 'l_receiptdate', 'l_shipinstruct', 'l_shipmode', 'l_comment', 'c_filler']
+2022-10-30 23:51:21,788 - root - {dbutils.py:226}: INFO - columns ['l_orderkey', 'l_partkey', 'l_suppkey', 'l_linenumber', 'l_quantity', 'l_extendedprice', 'l_discount', 'l_tax', 'l_returnflag', 'l_linestatus', 'l_shipdate', 'l_commitdate', 'l_receiptdate', 'l_shipinstruct', 'l_shipmode', 'l_comment', 'c_filler']
+2022-10-30 23:51:25,580 - root - {dbutils.py:226}: INFO - columns ['l_orderkey', 'l_partkey', 'l_suppkey', 'l_linenumber', 'l_quantity', 'l_extendedprice', 'l_discount', 'l_tax', 'l_returnflag', 'l_linestatus', 'l_shipdate', 'l_commitdate', 'l_receiptdate', 'l_shipinstruct', 'l_shipmode', 'l_comment', 'c_filler']
+2022-10-30 23:51:29,461 - root - {dbutils.py:226}: INFO - columns ['l_orderkey', 'l_partkey', 'l_suppkey', 'l_linenumber', 'l_quantity', 'l_extendedprice', 'l_discount', 'l_tax', 'l_returnflag', 'l_linestatus', 'l_shipdate', 'l_commitdate', 'l_receiptdate', 'l_shipinstruct', 'l_shipmode', 'l_comment', 'c_filler']
+2022-10-30 23:51:32,982 - root - {dbutils.py:226}: INFO - columns ['l_orderkey', 'l_partkey', 'l_suppkey', 'l_linenumber', 'l_quantity', 'l_extendedprice', 'l_discount', 'l_tax', 'l_returnflag', 'l_linestatus', 'l_shipdate', 'l_commitdate', 'l_receiptdate', 'l_shipinstruct', 'l_shipmode', 'l_comment', 'c_filler']
+2022-10-30 23:51:36,614 - root - {dbutils.py:226}: INFO - columns ['l_orderkey', 'l_partkey', 'l_suppkey', 'l_linenumber', 'l_quantity', 'l_extendedprice', 'l_discount', 'l_tax', 'l_returnflag', 'l_linestatus', 'l_shipdate', 'l_commitdate', 'l_receiptdate', 'l_shipinstruct', 'l_shipmode', 'l_comment', 'c_filler']
+2022-10-30 23:51:40,280 - root - {dbutils.py:226}: INFO - columns ['l_orderkey', 'l_partkey', 'l_suppkey', 'l_linenumber', 'l_quantity', 'l_extendedprice', 'l_discount', 'l_tax', 'l_returnflag', 'l_linestatus', 'l_shipdate', 'l_commitdate', 'l_receiptdate', 'l_shipinstruct', 'l_shipmode', 'l_comment', 'c_filler']
+2022-10-31 13:39:40,537 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-31 13:39:40,537 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-31 13:39:42,291 - root - {dbconnector.py:8}: INFO - PostgreSQL connection pool initialized
+2022-10-31 13:39:42,291 - root - {dbconnector.py:10}: INFO - {'dbtype': 'db2', 'creds': {'db2_user': 'db2inst1', 'db2_password': 'ChangeMe', 'db2_host': 'localhost', 'db2_port': '50000', 'db2_app_db': 'testdb'}}
+2022-10-31 13:39:42,310 - root - {main.py:12}: ERROR - Traceback (most recent call last):
+  File "main.py", line 9, in main
+    config_manager = LoaderConfigManager()
+  File "/home/vincent/git/demodbs/loader/src/manager/load_data.py", line 17, in __init__
+    self.cosmanager = S3COSMinioManager()
+  File "/home/vincent/git/demodbs/loader/src/common/cos/minio/cos_manager.py", line 30, in __init__
+    self.connect()
+  File "/home/vincent/git/demodbs/loader/src/common/cos/minio/cos_manager.py", line 41, in connect
+    buckets = self.client.list_buckets()
+  File "/home/vincent/.local/lib/python3.8/site-packages/minio/api.py", line 639, in list_buckets
+    response = self._execute("GET")
+  File "/home/vincent/.local/lib/python3.8/site-packages/minio/api.py", line 403, in _execute
+    return self._url_open(
+  File "/home/vincent/.local/lib/python3.8/site-packages/minio/api.py", line 386, in _url_open
+    raise response_error
+minio.error.S3Error: S3 operation failed; code: InvalidAccessKeyId, message: The Access Key Id you provided does not exist in our records., resource: /, request_id: 17232B03C8386390, host_id: a922fad3-6c10-4d67-b14a-a7220bfba7e8
+
+2022-10-31 13:55:59,696 - werkzeug - {_internal.py:224}: INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3333
+ * Running on http://10.127.215.41:3333
+2022-10-31 13:55:59,698 - werkzeug - {_internal.py:224}: INFO - [33mPress CTRL+C to quit[0m
+2022-10-31 13:55:59,700 - werkzeug - {_internal.py:224}: INFO -  * Restarting with stat
+2022-10-31 13:56:00,254 - werkzeug - {_internal.py:224}: WARNING -  * Debugger is active!
+2022-10-31 13:56:00,258 - werkzeug - {_internal.py:224}: INFO -  * Debugger PIN: 515-141-715
+2022-10-31 13:56:32,134 - werkzeug - {_internal.py:224}: INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3333
+ * Running on http://10.127.215.41:3333
+2022-10-31 13:56:32,135 - werkzeug - {_internal.py:224}: INFO - [33mPress CTRL+C to quit[0m
+2022-10-31 13:56:32,136 - werkzeug - {_internal.py:224}: INFO -  * Restarting with stat
+2022-10-31 13:56:32,693 - werkzeug - {_internal.py:224}: WARNING -  * Debugger is active!
+2022-10-31 13:56:32,694 - werkzeug - {_internal.py:224}: INFO -  * Debugger PIN: 515-141-715
+2022-10-31 14:13:08,989 - werkzeug - {_internal.py:224}: INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3333
+ * Running on http://10.127.215.41:3333
+2022-10-31 14:13:08,993 - werkzeug - {_internal.py:224}: INFO - [33mPress CTRL+C to quit[0m
+2022-10-31 14:13:08,995 - werkzeug - {_internal.py:224}: INFO -  * Restarting with stat
+2022-10-31 14:13:09,491 - werkzeug - {_internal.py:224}: WARNING -  * Debugger is active!
+2022-10-31 14:13:09,492 - werkzeug - {_internal.py:224}: INFO -  * Debugger PIN: 515-141-715

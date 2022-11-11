@@ -1,0 +1,131 @@
+[
+    {
+        "dbtype" : "pg",
+        "source" :  "minio",
+        "mode" : "create",
+        "config": {
+        "bucket_name":"main",
+        "object_name":"csv/lineitem.tbl.1",
+        "schema":"public",
+        "table":"lineitem",
+        "csv_colsep":"|",
+        "truncate": "true",
+        "table_ddl" : "CREATE TABLE LINEITEM ( L_ORDERKEY    INTEGER NOT NULL,  L_PARTKEY     INTEGER NOT NULL,  L_SUPPKEY     INTEGER NOT NULL,  L_LINENUMBER  INTEGER NOT NULL,  L_QUANTITY    DECIMAL(15,2) NOT NULL,  L_EXTENDEDPRICE  DECIMAL(15,2) NOT NULL,  L_DISCOUNT    DECIMAL(15,2) NOT NULL,  L_TAX         DECIMAL(15,2) NOT NULL,  L_RETURNFLAG  CHAR(1) NOT NULL,  L_LINESTATUS  CHAR(1) NOT NULL,  L_SHIPDATE    DATE NOT NULL,  L_COMMITDATE  DATE NOT NULL,  L_RECEIPTDATE DATE NOT NULL,  L_SHIPINSTRUCT CHAR(25) NOT NULL,  L_SHIPMODE     CHAR(10) NOT NULL,  L_COMMENT      VARCHAR(44) NOT null /*, C_FILLER CHAR(1) NULL */ );"
+       }
+    },   
+    {
+        "dbtype" : "pg",
+        "source" :  "minio",
+        "mode" : "append",
+        "config": {
+        "bucket_name":"main",
+        "object_name":"csv/lineitem.tbl.2,csv/lineitem.tbl.3,csv/lineitem.tbl.4,csv/lineitem.tbl.5,csv/csv/lineitem.tbl.6,csv/lineitem.tbl.7,csv/lineitem.tbl.8,csv/lineitem.tbl.9,csv/lineitem.tbl.10",
+        "schema":"public",
+        "table":"lineitem",
+        "csv_colsep":"|",
+        "table_ddl" : ""
+       }
+    },
+       {
+        "dbtype" : "pg",
+        "source" :  "minio",
+        "mode" : "create",
+        "config": {
+        "bucket_name":"main",
+        "object_name":"csv/nation.tbl",
+        "schema":"public",
+        "table":"nation",
+        "csv_colsep":"|",
+        "truncate": "true",
+        "table_ddl" : "CREATE TABLE NATION ( N_NATIONKEY INTEGER NOT NULL,  N_NAME CHAR(25) NOT NULL,  N_REGIONKEY INTEGER NOT NULL,  N_COMMENT VARCHAR(152));"
+       }
+    },
+       {
+        "dbtype" : "pg",
+        "source" :  "minio",
+        "mode" : "create",
+        "config": {
+        "bucket_name":"main",
+        "object_name":"csv/region.tbl",
+        "schema":"public",
+        "table":"region",
+        "csv_colsep":"|",
+        "truncate": "true",
+        "table_ddl" : "CREATE TABLE REGION ( R_REGIONKEY INTEGER NOT NULL,   R_NAME CHAR(25) NOT NULL,   R_COMMENT VARCHAR(152));"
+       }
+    }    
+    ,
+       {
+        "dbtype" : "pg",
+        "source" :  "minio",
+        "mode" : "create",
+        "config": {
+        "bucket_name":"main",
+        "object_name":"csv/part.tbl.1,csv/part.tbl.2,csv/part.tbl.3,csv/part.tbl.4,csv/part.tbl.5,csv/part.tbl.6,csv/part.tbl.7,csv/part.tbl.8,csv/part.tbl.9,csv/part.tbl.10",
+        "schema":"public",
+        "table":"part",
+        "csv_colsep":"|",
+        "truncate": "true",
+        "table_ddl" : "CREATE TABLE PART  ( P_PARTKEY     INTEGER NOT NULL, P_NAME        VARCHAR(55) NOT NULL, P_MFGR        CHAR(25) NOT NULL, P_BRAND       CHAR(10) NOT NULL, P_TYPE        VARCHAR(25) NOT NULL, P_SIZE        INTEGER NOT NULL, P_CONTAINER   CHAR(10) NOT NULL, P_RETAILPRICE DECIMAL(15,2) NOT NULL, P_COMMENT     VARCHAR(23) NOT NULL );"
+       }
+    },
+{
+        "dbtype" : "pg",
+        "source" :  "minio",
+        "mode" : "create",
+        "config": {
+        "bucket_name":"main",
+        "object_name":"csv/supplier.tbl.1,csv/supplier.tbl.2,csv/supplier.tbl.3,csv/supplier.tbl.4,csv/supplier.tbl.5,csv/supplier.tbl.6,csv/supplier.tbl.7,csv/supplier.tbl.8,csv/supplier.tbl.9,csv/supplier.tbl.10",
+        "schema":"public",
+        "table":"supplier",
+        "csv_colsep":"|",
+        "truncate": "true",
+        "table_ddl" : "CREATE TABLE SUPPLIER ( S_SUPPKEY     INTEGER NOT NULL,    S_NAME        CHAR(25) NOT NULL,    S_ADDRESS     VARCHAR(40) NOT NULL,    S_NATIONKEY   INTEGER NOT NULL,    S_PHONE       CHAR(15) NOT NULL,    S_ACCTBAL     DECIMAL(15,2) NOT NULL,    S_COMMENT     VARCHAR(101) NOT NULL);"
+       }
+    },
+    
+{
+        "dbtype" : "pg",
+        "source" :  "minio",
+        "mode" : "create",
+        "config": {
+        "bucket_name":"main",
+        "object_name":"csv/partsupp.tbl.1,csv/partsupp.tbl.2,csv/partsupp.tbl.3,csv/partsupp.tbl.4,csv/partsupp.tbl.5,csv/partsupp.tbl.6,csv/partsupp.tbl.7,csv/partsupp.tbl.8,csv/partsupp.tbl.9,csv/partsupp.tbl.10",
+        "schema":"public",
+        "table":"PARTSUPP",
+        "csv_colsep":"|",
+        "truncate": "true",
+        "table_ddl" : "CREATE TABLE PARTSUPP ( PS_PARTKEY     INTEGER NOT NULL,    PS_SUPPKEY     INTEGER NOT NULL,    PS_AVAILQTY    INTEGER NOT NULL,    PS_SUPPLYCOST  DECIMAL(15,2)  NOT NULL,    PS_COMMENT     VARCHAR(199) NOT NULL );"
+       }
+    },
+    
+{
+        "dbtype" : "pg",
+        "source" :  "minio",
+        "mode" : "create",
+        "config": {
+        "bucket_name":"main",
+        "object_name":"csv/customer.tbl.1,csv/customer.tbl.2,csv/customer.tbl.3,csv/customer.tbl.4,csv/customer.tbl.5,csv/customer.tbl.6,csv/customer.tbl.7,csv/customer.tbl.8,csv/customer.tbl.9,csv/customer.tbl.10",
+        "schema":"public",
+        "table":"customer",
+        "csv_colsep":"|",
+        "truncate": "true",
+        "table_ddl" : "CREATE TABLE CUSTOMER ( C_CUSTKEY     INTEGER NOT NULL,    C_NAME        VARCHAR(25) NOT NULL,    C_ADDRESS     VARCHAR(40) NOT NULL,    C_NATIONKEY   INTEGER NOT NULL,    C_PHONE       CHAR(15) NOT NULL,    C_ACCTBAL     DECIMAL(15,2)   NOT NULL,    C_MKTSEGMENT  CHAR(10) NOT NULL,    C_COMMENT     VARCHAR(117) NOT NULL);"
+       }
+    },
+    
+{
+        "dbtype" : "pg",
+        "source" :  "minio",
+        "mode" : "create",
+        "config": {
+        "bucket_name":"main",
+        "object_name":"csv/orders.tbl.1,csv/orders.tbl.2,csv/orders.tbl.3,csv/orders.tbl.4,csv/orders.tbl.5,csv/orders.tbl.6,csv/orders.tbl.7,csv/orders.tbl.8,csv/orders.tbl.9,csv/orders.tbl.10",
+        "schema":"public",
+        "table":"orders",
+        "csv_colsep":"|",
+        "truncate": "true",
+        "table_ddl" : " CREATE TABLE ORDERS  ( O_ORDERKEY       INTEGER NOT NULL,  O_CUSTKEY        INTEGER NOT NULL,  O_ORDERSTATUS    CHAR(1) NOT NULL,  O_TOTALPRICE     DECIMAL(15,2) NOT NULL,  O_ORDERDATE      DATE NOT NULL,  O_ORDERPRIORITY  CHAR(15) NOT NULL,    O_CLERK          CHAR(15) NOT NULL,   O_SHIPPRIORITY   INTEGER NOT NULL,  O_COMMENT        VARCHAR(79) NOT NULL);"
+       }
+    }
+]

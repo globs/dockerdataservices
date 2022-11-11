@@ -1,0 +1,8 @@
+flake8==4.0.1
+ibm-db==3.1.1
+mccabe==0.6.1
+prometheus-client==0.13.1
+pycodestyle==2.8.0
+pyflakes==2.4.0
+python-dotenv==0.20.0
+PyYAML==6.0

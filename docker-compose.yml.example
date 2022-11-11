@@ -1,0 +1,232 @@
+version: '3.7'
+
+services:
+
+  postgres-datalab:
+    container_name: postgres-datalab
+    hostname: pg-datalab
+    image: docker.io/library/postgres:14
+    restart: always
+    environment:
+      POSTGRES_USER: vincent
+      POSTGRES_PASSWORD: passtochange
+    ports:
+      - 5432:5432
+    networks:
+      - datalab-network
+    volumes:
+      - /data/pg:/var/lib/postgresql/data
+
+
+  db2-datalab:
+    container_name: db2-datalab
+    hostname: db2-datalab
+    image: docker.io/ibmcom/db2
+    privileged: true
+    restart: always
+    environment:
+      DB2INST1_PASSWORD: ChangeMe
+      LICENSE: accept
+      DBNAME: testdb
+    ports:
+      - 50000:50000
+    networks:
+      - datalab-network
+    volumes:
+      - /data/db2/:/database
+
+  minio-datalab:
+    container_name: minio-datalab
+    hostname: minio-datalab
+    image: quay.io/minio/minio
+    restart: always
+    environment:
+      MINIO_ROOT_USER: batman
+      MINIO_ROOT_PASSWORD: idontwanttosearch
+    ports:
+      - 9001:9000
+      - 9090:9090
+    networks:
+      - datalab-network
+    volumes:
+      - /data/minio:/data
+    command: server /data --console-address ":9090"
+
+  neo4j-datalab:
+    container_name: neo4j-datalab
+    hostname: neo4j-datalab
+    image: docker.io/neo4j:latest
+    restart: always
+    environment:
+      NEO4J_AUTH: neo4j/hellographs
+    ports:
+      - 7474:7474
+      - 7687:7687
+    networks:
+      - datalab-network
+    volumes:
+      - /data/neo4j/data:/data
+      - /data/neo4j/logs:/logs
+      - /data/neo4j/import:/var/lib/neo4j/import
+      - /data/neo4j/plugins:/plugins
+
+  restapi-datalab:
+    container_name: restapi-datalab
+    hostname: restapi-datalab
+    build:
+      context: ./loader
+      dockerfile: Dockerfile
+    restart: always
+    env_file:
+      - ./loader/conf/loader.env  
+    ports:
+      - 3333:3333
+    networks:
+      - datalab-network
+    depends_on:
+      - "db2-datalab"
+      - "minio-datalab"
+      - "postgres-datalab"
+    #command: python3.8 main_rest.py
+    command: gunicorn --workers 3 --bind 0.0.0.0:3333 --timeout 600 --log-level=debug  wsgi:app --reload
+
+#monitoring services
+  prom_exporter_db2:
+    container_name: promexporter_db2-datalab
+    hostname: promexporter_db2-datalab
+    build:
+      context: ./monitoring/db2_exporter
+      dockerfile: Containerfile
+    restart: always
+    ports:
+      - 8000:8000
+    networks:
+      - datalab-network
+    depends_on:
+      - "db2-datalab"
+
+
+  prom_exporter_pg:
+    container_name: promexporter_pg-datalab
+    hostname: promexporter_pg-datalab
+    image: quay.io/prometheuscommunity/postgres-exporter
+    restart: always
+    environment:
+      DATA_SOURCE_NAME: "postgresql://vincent:passtochange@pg-datalab:5432/postgres?sslmode=disable"
+    ports:
+      - 9187:9187
+    networks:
+      - datalab-network
+    depends_on:
+      - "postgres-datalab"
+
+  prom_exporter_node:
+    container_name: promexporter_node-datalab
+    hostname: promexporter_node-datalab
+    image: docker.io/prom/node-exporter:latest
+    restart: always
+    volumes:
+    - /proc:/host/proc:ro
+    - /sys:/host/sys:ro
+    - /:/rootfs:ro
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.rootfs=/rootfs'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
+    ports:
+      - 9100:9100
+    networks:
+      - datalab-network
+
+
+  promserver-datalab:
+    container_name: promserver-datalab
+    hostname: promserver-datalab
+    image: docker.io/prom/prometheus
+    restart: always
+    ports:
+      - 9091:9090    
+    networks:
+      - datalab-network
+    volumes:
+      - /home/vinceadmin/myprojects/dataapps/monitoring/appvolume:/etc/prometheus
+#    command:
+#      - '--config.file=/etc/prometheus/prometheus.yml  --log.level=debug'
+
+
+  grafana-datalab:
+    container_name: grafana-datalab
+    hostname: grafana-datalab
+    image: docker.io/grafana/grafana
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - datalab-network
+    volumes:
+      - /data/grafana:/var/lib/grafana
+
+#delta lakehouse services
+  airflow:
+    build: ./airflow
+    restart: unless-stopped
+    environment:
+      - AIRFLOW__CORE__FERNET_KEY=PeszOD9t6wKNdNONTGh-k4qsYbsGHQ8CSqTQZlqPCDk=
+      - AIRFLOW_HOME=/opt/airflow
+    ports:
+      - 8500:8500
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+    command: sleep infinity
+
+  spark-master:
+    build: ./spark
+    restart: unless-stopped
+    ports:
+      - 4040:4040
+      - 7077:7077
+      - 8080:8080
+      - 18080:18080
+    command: sh spark-master.sh
+
+  spark-worker:
+    build: ./spark
+    restart: unless-stopped
+    ports:
+      - "8081-8085:8081"
+    command: sh spark-worker.sh
+
+  presto:
+    build: ./presto
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./presto/coordinator_config.properties:/opt/presto/etc/config.properties
+      - ./presto/etc/catalog:/opt/presto/etc/catalog
+
+  presto-worker:
+    build: ./presto
+    volumes:
+      - ./presto/worker_config.properties:/opt/presto/etc/config.properties
+      - ./presto/etc/catalog:/opt/presto/etc/catalog
+
+  superset:
+    image: arezamoosavi/superset:latest
+    container_name: superset
+    environment:
+      ADMIN_USERNAME: admin
+      ADMIN_PWD: admin
+    ports:
+      - 8088:8088
+    volumes:
+      - ./superset:/superset
+    restart: unless-stopped
+
+volumes:
+  app_storage:
+
+
+networks:
+  datalab-network:
+    driver: bridge

@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose --file docker-compose.yml convert -c
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: db2-datalab
+  name: db2-datalab
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: db2-datalab
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose --file docker-compose.yml convert -c
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/datalab-network: "true"
+        io.kompose.service: db2-datalab
+    spec:
+      containers:
+        - env:
+            - name: DB2INST1_PASSWORD
+              value: ChangeMe
+            - name: DBNAME
+              value: testdb
+            - name: LICENSE
+              value: accept
+          image: docker.io/ibmcom/db2
+          name: db2-datalab
+          ports:
+            - containerPort: 50000
+          resources: {}
+          securityContext:
+            privileged: true
+          volumeMounts:
+            - mountPath: /database
+              name: db2-datalab-claim0
+      hostname: db2-datalab
+      restartPolicy: Always
+      volumes:
+        - name: db2-datalab-claim0
+          persistentVolumeClaim:
+            claimName: db2-datalab-claim0
+status: {}

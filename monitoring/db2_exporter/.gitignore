@@ -1,0 +1,13 @@
+# Environment
+.env
+
+# Virtulal env dirs
+bin/
+lib/
+include/
+
+# Virtulal env config
+pyvenv.cfg
+
+# OS cache
+.DS_Store

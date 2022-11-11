@@ -1,0 +1,1 @@
+podman build --tag localhost/loader_service:LATEST -f ./Dockerfile

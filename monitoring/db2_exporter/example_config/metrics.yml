@@ -1,0 +1,136 @@
+---
+tablespace_metrics:
+  from: SYSIBMADM.TBSP_UTILIZATION
+  where: TBSP_TYPE='DMS'
+  labels:
+    - Tablespace: TBSP_NAME
+  gauges:
+    - db2_tablespace_size_kilobytes:
+        TBSP_TOTAL_SIZE_KB: Total space
+    - db2_tablespace_used_kilobytes:
+        TBSP_USED_SIZE_KB: Space used
+
+bufferpool_usage:
+  from: SYSIBMADM.SNAPBP_PART
+  where: BP_TBSP_USE_COUNT <> 0
+  labels:
+    - Bufferpool: BP_NAME
+  gauges:
+    - db2_bufferpool_currentsize_pages:
+        BP_CUR_BUFFSZ: Current Size of Buffer Pool
+        BP_TBSP_USE_COUNT: Number of Table Spaces Mapped to Buffer Pool
+
+bufferpool_settings:
+  from: SYSCAT.BUFFERPOOLS
+  where: True
+  labels:
+    - Bufferpool: BPNAME
+  gauges:
+    - db2_bufferpool_pagesize_bytes:
+        PAGESIZE: Page size of Buffer Pool
+
+bufferpool_hit_ratio:
+  from: SYSIBMADM.BP_HITRATIO
+  where: TOTAL_LOGICAL_READS <> 0
+  labels:
+    - Bufferpool: BP_NAME
+  gauges:
+    - db2_bufferpool_lreads_total_count:
+        TOTAL_LOGICAL_READS: Total logical reads in the bufferpool
+    - db2_bufferpool_preads_total_count:
+        TOTAL_PHYSICAL_READS: Total physical reads in the bufferpool
+    - db2_bufferpool_hitratio_total_percent:
+        TOTAL_HIT_RATIO_PERCENT: Total hit ratio
+    - db2_bufferpool_lreads_data_count:
+        DATA_LOGICAL_READS: Data logical reads in the bufferpool
+    - db2_bufferpool_preads_data_count:
+        DATA_PHYSICAL_READS: Data physical reads in the bufferpool
+    - db2_bufferpool_hitratio_data_percent:
+        DATA_HIT_RATIO_PERCENT: Data hit ratio
+    - db2_bufferpool_lreads_index_count:
+        INDEX_LOGICAL_READS: Index logical reads in the bufferpool
+    - db2_bufferpool_preads_index_count:
+        INDEX_PHYSICAL_READS: Index physical reads in the bufferpool
+    - db2_bufferpool_hitratio_index_percent:
+        INDEX_HIT_RATIO_PERCENT: Index hit ratio
+    - db2_bufferpool_lreads_xda_count:
+        XDA_LOGICAL_READS: XDA logical reads in the bufferpool
+    - db2_bufferpool_preads_xda_count:
+        XDA_PHYSICAL_READS: XDA physical reads in the bufferpool
+    - db2_bufferpool_hitratio_xda_percent:
+        XDA_HIT_RATIO_PERCENT: XDA hit ratio
+
+most_hot_tables:
+  from: SYSIBMADM.SNAPTAB A, syscat.tables B
+  where: OWNERTYPE='U' AND TYPE='T' and A.TABSCHEMA=B.TABSCHEMA AND A.TABNAME = B.TABNAME order by (2.5* ROWS_WRITTEN + ROWS_READ) desc, STATS_TIME asc fetch first 10 rows only with ur
+  labels:
+    - Table: A.TABSCHEMA||'.'||A.TABNAME
+    - Tablespace: TBSPACE
+  gauges:
+    - db2_table_data_pages:
+        DATA_OBJECT_PAGES: Number of pages for data
+    - db2_table_index_pages:
+        INDEX_OBJECT_PAGES: Number of pages for indexes
+    - db2_table_read_rows:
+        ROWS_READ: Rows read
+    - db2_table_written_rows:
+        ROWS_WRITTEN: Rows written
+    - db2_table_card:
+        CARD: Cardinality
+
+last_backups:
+  from: sysibmadm.db_history
+  where: operation='B' and SEQNUM = 1 order by start_time with ur
+  labels:
+    - EID: EID
+    - Day: dayname(START_TIME)
+    - Type: OPERATIONTYPE
+    - Object: OBJECTTYPE
+    - SQLCODE: SQLCODE
+  gauges:
+    - db2_backup_start_timestamp:
+        START_TIME: The timestamp that the backup started
+    - db2_backup_end_timestamp:
+        END_TIME: The timestamp that the backup ended
+
+connections:
+  from: sysibmadm.snapdb
+  where: True
+  labels:
+  gauges:
+    - db2_connections_count:
+        APPLS_CUR_CONS: The number of connections
+    - db2_locks_wating_count:
+        LOCKS_WAITING: The number of locks waiting
+    - db2_indoubt_trans_count:
+        NUM_INDOUBT_TRANS: The number of indoubt transactions
+        
+trans_log:
+  from: sysibmadm.log_utilization
+  where: True
+  labels:
+  gauges:
+    - db2_log_util_percent:
+        LOG_UTILIZATION_PERCENT: Percent of log utilized
+    - db2_log_used_kilobytes:
+        TOTAL_LOG_USED_KB: Kilobytes of log used
+    - db2_log_available_kilobytes:
+        TOTAL_LOG_AVAILABLE_KB: Kilobytes of log available
+    - db2_log_top_used_kilobytes:
+        TOTAL_LOG_USED_TOP_KB: The max KB of log used
+
+sql_stmts:
+  from: sysibmadm.snapdb
+  where: True
+  labels:
+  gauges:
+    - db2_sql_commit_count:
+        COMMIT_SQL_STMTS: SQL statetments commited
+    - db2_sql_rollback_count:
+        ROLLBACK_SQL_STMTS: SQL statetments rollback
+    - db2_sql_dynamic_count:
+        DYNAMIC_SQL_STMTS: Dynamic SQL statetments
+    - db2_sql_static_count:
+        STATIC_SQL_STMTS: Static SQL statetments
+    - db2_sql_rows_read:
+        ROWS_READ: Rows read

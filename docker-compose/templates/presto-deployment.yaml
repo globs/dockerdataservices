@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose --file docker-compose.yml convert -c
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: presto
+  name: presto
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: presto
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose --file docker-compose.yml convert -c
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: presto
+    spec:
+      containers:
+        - image: presto
+          name: presto
+          ports:
+            - containerPort: 8888
+          resources: {}
+          volumeMounts:
+            - mountPath: /opt/presto/etc/config.properties
+              name: presto-claim0
+            - mountPath: /opt/presto/etc/catalog
+              name: presto-claim1
+      restartPolicy: Always
+      volumes:
+        - name: presto-claim0
+          persistentVolumeClaim:
+            claimName: presto-claim0
+        - name: presto-claim1
+          persistentVolumeClaim:
+            claimName: presto-claim1
+status: {}

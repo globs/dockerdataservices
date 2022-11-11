@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose --file docker-compose.yml convert -c
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: postgres-datalab
+  name: postgres-datalab
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: postgres-datalab
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose --file docker-compose.yml convert -c
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/datalab-network: "true"
+        io.kompose.service: postgres-datalab
+    spec:
+      containers:
+        - env:
+            - name: POSTGRES_PASSWORD
+              value: passtochange
+            - name: POSTGRES_USER
+              value: vincent
+          image: docker.io/library/postgres:14
+          name: postgres-datalab
+          ports:
+            - containerPort: 5432
+          resources: {}
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: postgres-datalab-claim0
+      hostname: pg-datalab
+      restartPolicy: Always
+      volumes:
+        - name: postgres-datalab-claim0
+          persistentVolumeClaim:
+            claimName: postgres-datalab-claim0
+status: {}

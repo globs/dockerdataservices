@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose --file docker-compose.yml convert -c
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: prom-exporter-db2
+  name: prom-exporter-db2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: prom-exporter-db2
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose --file docker-compose.yml convert -c
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/datalab-network: "true"
+        io.kompose.service: prom-exporter-db2
+    spec:
+      containers:
+        - image: prom-exporter-db2
+          name: promexporter-db2-datalab
+          ports:
+            - containerPort: 8000
+          resources: {}
+      hostname: promexporter_db2-datalab
+      restartPolicy: Always
+status: {}

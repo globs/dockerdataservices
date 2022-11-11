@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose --file docker-compose.yml convert -c
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: spark-master
+  name: spark-master
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: spark-master
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose --file docker-compose.yml convert -c
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: spark-master
+    spec:
+      containers:
+        - args:
+            - sh
+            - spark-master.sh
+          image: spark-master
+          name: spark-master
+          ports:
+            - containerPort: 4040
+            - containerPort: 7077
+            - containerPort: 8080
+            - containerPort: 18080
+          resources: {}
+      restartPolicy: Always
+status: {}

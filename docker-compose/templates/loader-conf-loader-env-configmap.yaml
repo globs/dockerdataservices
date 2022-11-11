@@ -1,0 +1,28 @@
+apiVersion: v1
+data:
+  DB2_DB2: testdb
+  DB2_HOST: vps-98b06412.vps.ovh.net
+  DB2_PASSWORD: ChangeMe
+  DB2_PORT: "50000"
+  DB2_SCHEMA: none
+  DB2_USER: db2inst1
+  MINIO_CREDS_JSON: '{"url":"51.91.11.174:9001","accessKey":"tk5z1eLu01oJsw0K","secretKey":"R7cNbwQdnvVlV5F90vwDSWfiBaHMQUls","api":"s3v4","path":"auto"}'
+  MONGO_DB: db
+  MONGO_HOST: vps-98b06412.vps.ovh.net
+  MONGO_PASSWORD: root
+  MONGO_PORT: "2789"
+  MONGO_SCHEMA: none
+  MONGO_USER: root
+  POSTGRESQL_DB: postgres
+  POSTGRESQL_HOST: vps-98b06412.vps.ovh.net
+  POSTGRESQL_PASSWORD: gG9rV(@+LE5WyZmA
+  POSTGRESQL_PORT: "5432"
+  POSTGRESQL_SCHEMA: none
+  POSTGRESQL_USER: vincent
+  logs_location: ../logs/CosToDB.log
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: restapi-datalab-loader-conf-loader-env
+  name: loader-conf-loader-env

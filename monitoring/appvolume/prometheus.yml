@@ -1,0 +1,29 @@
+global:
+  scrape_interval:     15s
+  evaluation_interval: 15s
+
+rule_files:
+  # - "first.rules"
+  # - "second.rules"
+
+scrape_configs:
+  - job_name: prometheus
+    static_configs:
+      - targets: ['promserver-datalab:9090']
+  - job_name: node
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['promexporter_node-datalab:9100']
+  - job_name: db2
+    static_configs:
+      - targets: ['promexporter_db2-datalab:8000']    
+  - job_name: postgresql
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['promexporter_pg-datalab:9187']    
+  - job_name: minio-job
+    bearer_token: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjQ4MjEwMDA5NzMsImlzcyI6InByb21ldGhldXMiLCJzdWIiOiJPUjJTeEZVU1cwWGs2SjNpIn0.jrekEzXYDd6LInHxb9DoccZKiZeYpdr5al7GZgAh3AvEZvK0opa1De1MGiHoHR826Lst4fHkSF4Kjb_kaet0AA
+    metrics_path: /minio/v2/metrics/cluster
+    scheme: http
+    static_configs:
+      - targets: ['minio-datalab:9000']      
