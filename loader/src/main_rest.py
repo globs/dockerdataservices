@@ -25,17 +25,17 @@ def run_job_manual():
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
         json_dict = request.json
-        loaderManager.apply_json(json.dumps(json_dict))
-        return 'Submitted Job completed'
+        run_results = loaderManager.apply_json(json.dumps(json_dict))
+        return run_results
     else:
         return f'Content-Type {content_type} not supported! application/json expected'
 
 
 if __name__=="__main__":
-    #common.settings.init_logging()
+    common.settings.init_logging()
     app.run(debug=True, host='0.0.0.0',port='3333')
-else:
-    gunicorn_logger = logging.getLogger('gunicorn.error')
-    app.logger.handlers = gunicorn_logger.handlers
-    app.logger.setLevel(gunicorn_logger.level)
+#else:
+#    gunicorn_logger = logging.getLogger('gunicorn.error')
+#    app.logger.handlers = gunicorn_logger.handlers
+#    app.logger.setLevel(gunicorn_logger.level)
 

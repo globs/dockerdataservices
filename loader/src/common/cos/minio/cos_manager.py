@@ -55,7 +55,7 @@ class S3COSMinioManager(object):
         response = None
         try:
             response = self.client.get_object(bucket, objectname)
-            string = response.read().decode('utf-8')
+            string = response.read().decode('utf-8').split('\n', 1)[1]
             #logging.debug(string)
             # Read data from response.
         finally:
@@ -80,17 +80,17 @@ class S3COSMinioManager(object):
 
 
 
-def main():
-    try:
-        common.settings.init_logging()
-        minio_cos = S3COSMinioManager()
-        config_manager = LoaderConfigManager()
-        config_manager.apply_json(common.settings.db_transfers)
+#def main():
+    #try:
+       # common.settings.init_logging()
+       ## minio_cos = S3COSMinioManager()
+       # config_manager = LoaderConfigManager()
+       # config_manager.apply_json(common.settings.db_transfers)
        # minio_cos.transferCSVFileToPostGRESQLTable('main', 'csv/customer.tbl.1', 'public','customer','|')
       #  minio_cos.transferCSVFileToPostGRESQLTable('main', 'csv/lineitem.tbl.1', 'public','lineitem','|')
        # minio_cos.transferCSVFileToDB2Table('main', 'csv/GARANTIES_202210281412.csv', 'ASSURANCE_CIE','GARANTIES',',')
         #minio_cos.list_objects('main')
-    except:
+ #   except:
         logging.error(traceback.format_exc())
 	#binance_loader = backend.binance_api_manager.Binance_api_loader()
 	#binance_loader.get_orderbook('LTCBTC')

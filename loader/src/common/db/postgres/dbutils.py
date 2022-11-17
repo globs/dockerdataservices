@@ -241,6 +241,7 @@ class PostGreSQLUtils():
             cursor.copy_from(stringio_data, target_table, sep=separator,columns=columns)
         except Exception as e:
             logging.error(f'Bulk insert in pg database error: {e}')
+            raise Exception(e)
         finally:
             cursor.close()  
             cnn.commit()

@@ -36,7 +36,7 @@ def init_logging():
 
 	dictConfig(dictconfig)
 
-csv_separator='|'
+csv_separator=','
 
 db_servers = """
 [
